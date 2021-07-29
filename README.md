@@ -1,4 +1,4 @@
-# SiglentSDG6000XWaveGenerator
+# SiglentAkipWaveGenerator
 
 Скрипт генерации (интерполяции) волн по контрольным точкам
 
