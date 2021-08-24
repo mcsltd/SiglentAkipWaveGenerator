@@ -1,6 +1,7 @@
 import argparse
 import csv
 import numpy as np
+import re
 
 
 def main():
@@ -26,9 +27,9 @@ def parse_args():
 def read_points(filename):
     points = []
     with open(filename, "rt", newline="") as fin:
-        reader = csv.reader(fin)
-        for row in reader:
-            points.append((int(row[0]), float(row[1])))
+        for line in fin:
+            parts = re.split(",|;", line.strip())
+            points.append((int(parts[0]), float(parts[1])))
     return points
 
 
